@@ -77,7 +77,7 @@ export async function addContact(name, email, phone) {
     await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
     return newContact;
   } catch (error) {
-    console.log("Unable to add a new contact:", error);
+    console.error("Unable to add a new contact:", error);
     return null;
   }
 }
