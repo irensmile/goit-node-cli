@@ -49,9 +49,9 @@ export async function removeContact(contactId) {
     if (index === -1) return null;
 
     //Знайшли елемент для видаленя з індексом index
-    console.log(contacts.length);
+
     const removedContact = contacts.splice(index, 1)[0];
-    console.log(contacts.length);
+
     // Записуємо зміни у файл
     await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
     // Повертаємо видалений контакт
